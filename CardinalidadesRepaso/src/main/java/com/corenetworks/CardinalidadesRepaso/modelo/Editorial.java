@@ -20,6 +20,7 @@ public class Editorial {
     private String nombre;
     @Column(length = 120, nullable = false)
     private String direccion;
+
     @OneToMany(mappedBy = "editorial",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private List<Libro> libros;
 }

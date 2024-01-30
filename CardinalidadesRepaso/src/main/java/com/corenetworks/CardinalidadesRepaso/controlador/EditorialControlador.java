@@ -33,5 +33,15 @@ public class EditorialControlador {
     public Editorial consultarUno(@PathVariable(name = "id") int id){
         return service.consultarUno(id);
     }
+    @GetMapping("/filtro/{direccion}")
+    public List<Editorial>filtroPorDireccion(@PathVariable(name = "direccion") String direccion){
+        return service.filtroPorDireccion(direccion);
+
+
+    }
+    @GetMapping("/filtro2/{nombre}")
+    public List<Editorial>filtroPorNombre(@PathVariable(name = "nombre") String nombre ){
+        return service.filtroPorNombre(nombre);
+    }
 
 }
